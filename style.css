@@ -17,6 +17,20 @@ header {
 	text-align: center;
 }
 
+#report-button {
+	background-color: red;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#report-button:hover {
+	background-color: darkred;
+}
+
+
 .online {
 	color: green;
 }
