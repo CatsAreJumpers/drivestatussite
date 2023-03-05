@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Report an Issue</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      label {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+      }
+      
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat;
+        background-position: calc(100% - 10px) center;
+        background-size: 12px;
+      }
+      
+      textarea {
+        resize: vertical;
+      }
+      
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      
+      button[type="submit"]:active {
+        background-color: #1e4720;
+      }
+      
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="https://formspree.io/f/xyyajobl" method="POST">
+        <label for="name">Issue:</label>
+        <input type="text" id="Issue" name="Issue" required>
+        <label for="email">Email(not required):</label>
+        <input type="email" id="email" name="_replyto">
+        <label for="category">Issue Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select an option</option>
+          <option value="onlinegames">Online Games</option>
+          <option value="offlinegames">Offline Games</option>
+          <option value="apps">Apps</option>
+          <option value="other">Other</option>
+          <input type="submit" value="Submit">
